@@ -63,12 +63,29 @@
 
         let criamain = document.createElement("main");
        let docmain = document.getElementById("meuBody").appendChild(criamain);
-       document.getElementsByTagName("main")[0].className = 'main-content'; 
+       document.getElementsByTagName("main")[0].id = 'main-content'; 
 
        let criasection = document.createElement("section");
-       let docsection = document.getElementsByClassName("main-content").appendChild(criasection);
-       //document.getElementsByTagName("main")[1].className = 'center-content'; 
+       let docsection = document.getElementById("main-content").appendChild(criasection);
+       document.getElementById("main-content").firstElementChild.id = 'center-content'; 
 
+       let criap = document.createElement("p");
+       let docp = document.getElementById("center-content").appendChild(criap);
+       document.getElementById("center-content").firstElementChild.innerHTML = "algum texto"
+
+       let criasection1 = document.createElement("section");
+       let docsection1 = document.getElementById("main-content").appendChild(criasection1);
+       document.getElementById("main-content").firstElementChild.nextElementSibling.id = 'left-content'; 
+
+       let criasection2 = document.createElement("section");
+       let docsection2 = document.getElementById("main-content").appendChild(criasection2);
+       document.getElementById("main-content").firstElementChild.nextElementSibling.nextElementSibling.id = 'right-content'; 
+
+       let adicionaImg = document.createElement("img");
+       let docImg = document.getElementById("left-content").appendChild(adicionaImg);
+       let img = document.getElementById("left-content");
+       img.firstElementChild.id = "small-image"
+       img.firstElementChild.src = 'https://picsum.photos/200'
 
     </script>
   </body>
